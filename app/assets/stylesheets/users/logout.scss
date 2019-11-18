@@ -1,0 +1,37 @@
+.area {
+  margin: 40px auto 0 ;
+  width: 1020px ;
+  &__left {
+    float: left;
+    width: 280px;
+    margin: 0 40px 0 0;
+  }
+  &__right {
+    float: right;
+    width: 700px;
+    &__content {
+      background-color: white;
+      margin: 0;
+      &__logout {
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 65px 30px;
+        text-align: center;
+        &__btn {
+          background: #ea352d;
+          border: 1px solid #ea352d;
+          width: 100%;
+          height: 48px;
+          line-height: 48px;
+          font-size: 14px;
+          cursor: pointer;
+          text-align: center;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
