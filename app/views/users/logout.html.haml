@@ -1,4 +1,5 @@
 =render "shared/header"
+
 .area
   .area__left
     =render "mypages/side-bar"
@@ -7,11 +8,6 @@
       .area__right__content__logout
         %form{type:"submit",class:"area__right__content__logout__btn"}
           =link_to "ログアウト", root_path
-
-
-
-
-
 
 =render "shared/sell-btn"
 =render "shared/footer"
