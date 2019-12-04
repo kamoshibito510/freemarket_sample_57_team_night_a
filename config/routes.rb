@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   # get 'mypage', to: 'mypages#index'
   # get 'profile', to: 'mypages#edit' #仮ルーティング、プロフィール編集画面
   # get 'identification', to: 'mypages#identification' #仮ルーティング、ユーザー本人確認画面
-  get 'users', to: 'users#new' 
-  # get 'login', to: 'users#login-new' #仮ルーティング、ログイン画面用のビュー
+  get 'users', to: 'users#new' #ユーザー新規会員登録
+  # get 'users/sign_in', to: 'users#login-new' #仮ルーティング、ログイン画面用のビュー
   # get 'logout', to: 'users#logout' #仮ルーティング、ログアウト画面用のビュー
   # get 'buy', to: 'users#buy' #仮ルーティング、商品購入確認ページ
   # get 'card', to: 'users#card' #仮ルーティング、クレジットカード登録ページ
