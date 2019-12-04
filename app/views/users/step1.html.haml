@@ -1,0 +1,67 @@
+.step1-container
+  .step1-header
+    = render "users/registrations/progress-bar"
+
+  .step1-main
+    %section
+      %h2 
+        会員情報入力
+      %form
+        .step1-content
+          .form-group.form-group--top
+            %label
+              ニックネーム
+              %span 必須
+            %input{type:"text",placeholder:"例)キャベツ太郎"}
+          .form-group
+            %label
+              メールアドレス
+              %span 必須
+            %input{type:"text",placeholder:"PC・携帯どちらでも可"}
+          .form-group
+            %label
+              パスワード
+              %span 必須
+            %input{type:"text",placeholder:"7文字以上の半角英数字"}
+            %p.form-info
+              ※ 英字と数字の両方を含めて設定してください
+            .password-apear
+              %input{type:"checkbox"}
+              %label
+                パスワードを表示する
+          .form-group
+            %label
+              本人確認
+            %p 
+              安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+          .form-group
+            .label-box
+              %label
+                お名前(全角) 
+                %span 必須
+            .input-box
+              %input{type:"text",placeholder:"例) 山田",class:"input-left"}
+              %input{type:"text",placeholder:"例) 彩",class:"input-right"}
+
+          .form-group
+            .label-box
+              %label
+                お名前(全角) 
+                %span 必須
+            .input-box
+              %input{type:"text",placeholder:"例) ヤマダ",class:"input-left"}
+              %input{type:"text",placeholder:"例) アヤ",class:"input-right"}
+
+          .form-group
+            %label
+              生年月日
+              %span 必須
+            %input{type:"text",placeholder:"PC・携帯どちらでも可"}
+            %p
+              ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。 
+
+
+  .step1-footer
+    = render "login-footer"
+
+

@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   
   get 'mypage', to: 'mypages#index'
   get 'users', to: 'users#new'
+  get 'registrations', to: 'users#create' 
 
 end
