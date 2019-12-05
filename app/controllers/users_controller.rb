@@ -2,7 +2,9 @@ class UsersController < ApplicationController
   def new
   end
 
-  def create
-   render "step1"
+  def step1
+  end
+
+  def step2
   end
 end

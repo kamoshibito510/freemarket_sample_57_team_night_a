@@ -1,0 +1,23 @@
+.step2-container
+  .step2-header
+    = render "users/registrations/progress-bar"
+  
+  .step2-main
+    %section
+      .step2-content
+        %h2 電話番号の確認
+        %form
+          %p.number 携帯電話の番号
+          %input{type:"text",placeholder:" 携帯電話の番号を入力"}
+          %p.form-info
+            本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+          .phone-number-btn
+            %button{type:"submit"} SMSを送信する
+          %p.form-info
+            ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+          .text-right
+            =link_to "電話番号の確認が必要な理由"
+            %i.fa.fa-chevron-right
+
+  .step2-footer
+    = render "login-footer"

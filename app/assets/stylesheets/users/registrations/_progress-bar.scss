@@ -48,7 +48,7 @@
 .progress-status_bar {
 position: absolute;
 left: 50%;
-top: 25px;
+top: 30px;
 bottom: 5px;
 display: block;
 width: 130px;
@@ -70,12 +70,12 @@ color: #ea352d;
 }
 }
 
-// #through .progress-status_bar{
-//   background: #ea352d;
-// }
-// #active{
-//   color: #ea352d;
-//   .progress-status{
-//     background: #ea352d;
-//   }
-// }
+#through .progress-status_bar{
+  background: #ea352d;
+}
+#active{
+  color: #ea352d;
+  .progress-status{
+    background: #ea352d;
+  }
+}
