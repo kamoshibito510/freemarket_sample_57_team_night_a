@@ -46,7 +46,7 @@
           .form-group
             .label-box
               %label
-                お名前(全角) 
+                お名前カナ(全角) 
                 %span 必須
             .input-box
               %input{type:"text",placeholder:"例) ヤマダ",class:"input-left"}
@@ -56,9 +56,47 @@
             %label
               生年月日
               %span 必須
-            %input{type:"text",placeholder:"PC・携帯どちらでも可"}
-            %p
-              ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。 
+            .birthday-select
+              .select-wrap
+                %select{size:"1",name:"year"}
+                  %option{value:"2000"}2000
+                  %option{value:"1999"}1999
+                  %option{value:"1998"}1998
+              %span 
+                %br
+                %br  年
+              .select-wrap
+                %select{size:"1",name:"month"}
+                  %option{value:"12"}12
+                  %option{value:"11"}11
+                  %option{value:"10"}10
+              %span 
+                %br
+                %br  月
+              .select-wrap
+                %select{size:"1",name:"day"}
+                  %option{value:"3"}3
+                  %option{value:"2"}2
+                  %option{value:"1"}1
+              %span 
+                %br
+                %br  日
+            %p.form-info
+              ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+        .step1-content
+          .form-group.recapcha ここに Recapcha
+          .form-group
+            %p 
+              「次へ進む」のボタンを押すことにより、
+              = link_to "利用規約",target:"blank"
+              に同意したものとみなします
+          .form-group
+            %button{type:"submit"} 次へ進む    
+          .form-group.text-right
+            = link_to "本人情報の登録について",target:"blank"
+            %i.fa.fa-chevron-right
+
+
 
 
   .step1-footer
