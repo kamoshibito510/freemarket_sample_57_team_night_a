@@ -11,4 +11,7 @@ class UsersController < ApplicationController
   def step3
   end
   
+  def step5
+  end
+  
 end
