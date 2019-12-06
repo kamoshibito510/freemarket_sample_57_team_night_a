@@ -1,0 +1,60 @@
+.step3-container
+  .step3-header
+    = render "users/registrations/progress-bar"
+  
+  .step3-main
+    %section
+      .step3-content
+        %h2 住所入力
+        %form
+          .form-group
+            %label
+              お名前
+              %span 必須
+            %input{type:"text",placeholder:" 例)山田"}
+            %input{type:"text",placeholder:" 例)彩"}
+          .form-group
+            %label
+              お名前(カナ)
+              %span 必須
+            %input{type:"text",placeholder:" 例)ヤマダ"}
+            %input{type:"text",placeholder:" 例)アヤ"}
+          .form-group
+            %label
+              郵便番号
+              %span 必須
+            %input{type:"text",placeholder:" 例)355-2860"}
+          .form-group
+            %label
+              都道府県
+              %span 必須
+            %select
+              %option{value:""}北海道
+              %option{value:""}東京
+              %option{value:""}沖縄
+          .form-group
+            %label
+              市区町村
+              %span 必須
+            %input{type:"text",placeholder:" 例)大阪市中央区"}
+          .form-group
+            %label
+              番地
+              %span 必須
+            %input{type:"text",placeholder:" 例)心斎橋筋3-2-1"}
+          .form-group
+            %label
+              建物名
+              %span.gray 必須
+            %input{type:"text",placeholder:" 例)メゾンアルファ"}
+          .form-group
+            %label
+              電話
+              %span.gray 必須
+            %input{type:"text",placeholder:" 例)090-5959-2121"}
+          .form-group.bottom
+            %button{type:"submit"} 次へ進む
+
+
+  .step3-footer
+    = render "login-footer"
