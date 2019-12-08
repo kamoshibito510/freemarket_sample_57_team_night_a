@@ -7,11 +7,20 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
 
+  resources :card, only:[:new,:show] do
+    collection do
+      post 'show', to: 'card#show'
+      post 'pay', to: 'card#pay'
+      post 'delete', to: 'card#delete'
+    end
+  end
+  
+  get 'card', to: 'card#new'
   # root to: "products#index"
   # get 'mypage', to: 'mypages#index'
   # get 'profile', to: 'mypages#edit' #仮ルーティング、プロフィール編集画面
   # get 'identification', to: 'mypages#identification' #仮ルーティング、ユーザー本人確認画面
-  get 'users', to: 'users#new' #ユーザー新規会員登録
+  # get 'users', to: 'users#new' #ユーザー新規会員登録
   # get 'users/sign_in', to: 'users#login-new' #仮ルーティング、ログイン画面用のビュー
   # get 'logout', to: 'users#logout' #仮ルーティング、ログアウト画面用のビュー
   # get 'buy', to: 'users#buy' #仮ルーティング、商品購入確認ページ

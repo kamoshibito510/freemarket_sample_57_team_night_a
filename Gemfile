@@ -69,6 +69,8 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'payjp'
+gem 'dotenv-rails'
+gem "jquery-rails"
 
 group :production do
   gem 'unicorn', '5.4.1'
