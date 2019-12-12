@@ -3,10 +3,16 @@ Rails.application.routes.draw do
 
   root to: 'users#index'
   get 'users/index'
-  devise_for :users, controllers: {
-    sessions: 'users/sessions'
-  }
+  devise_for :users, :controllers => {
+    :registrations => 'users/registrations',
+    :sessions => 'users/sessions'   
+  } 
+  devise_scope :user do
+    get "sign_in", :to => "users/sessions#new"
+    get "sign_out", :to => "users/sessions#destroy" 
+  end
 
+  
   resources :card, only:[:new,:show] do
     collection do
       post 'show', to: 'card#show'
@@ -14,8 +20,12 @@ Rails.application.routes.draw do
       post 'delete', to: 'card#delete'
     end
   end
+
+
+
+
   
-  get 'card', to: 'card#new'
+  # get 'card', to: 'card#new'
   # root to: "products#index"
   # get 'mypage', to: 'mypages#index'
   # get 'profile', to: 'mypages#edit' #仮ルーティング、プロフィール編集画面
