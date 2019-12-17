@@ -1,7 +1,38 @@
 .card-container
   = render "users/login-header"
-
   .card-main
+
+    .progress-bar-contents
+      .progress-bar
+        .progress-bar__text
+          会員登録
+        .progress-bar__dot.dot-bars1.red-dot
+          ●
+          .progress-bar__dot__bars.dot-bar1#red-bar
+      .progress-bar
+        .progress-bar__text
+          電話番号認証
+        .progress-bar__dot.dot-bars2.red-dot
+          ●
+          .progress-bar__dot__bars.dot-bars2#red-bar
+      .progress-bar
+        .progress-bar__text
+          住所入力
+        .progress-bar__dot.dot-bar3.red-dot
+          ●
+          .progress-bar__dot__bars.dot-bars3#red-bar
+      .progress-bar
+        .progress-bar__text.login-input-credit
+          支払い方法
+        .progress-bar__dot.dot-bar4.red-dot
+          ●
+          .progress-bar__dot__bars.dot-bars4
+      .progress-bar
+        .progress-bar__text
+          完了
+        .progress-bar__dot.dot-bars5
+          ●
+
     .card-box
       = form_with id: "charge-form", url: "/card", method: :post, local: true do |f|
         %h3.card-box__head 支払い方法

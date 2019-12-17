@@ -1,6 +1,64 @@
+@import"variable.scss";
+@import"mixin.scss";
+
 .card-container {
   padding: 0 0 220px;
   position: relative;
+
+  .progress-bar{
+    color: $button-gray;
+    width: 100px;
+    height:32px;
+    box-sizing: border-box;
+    &__text{
+      font-size: 15px;
+      font-weight: 600;
+      width:100px;
+      text-align: center;
+      color: gray;
+    }
+    &__dot{
+      font-size: 25px;
+      width:12px;
+      margin: auto;
+      z-index: 1;
+      position: relative;
+      &__bars{
+        background-color: $button-gray;
+        width:97px;
+        height: 2px;
+        position: absolute;
+        bottom: 12px;
+        left: 8px;
+        z-index: -1;
+      }
+    }
+  }
+  
+  .progress-bar-contents{
+    text-align: center;
+    width: 480px;
+    height: 60px;
+    box-sizing: border-box;
+    display: flex;
+    margin: 0 auto; 
+    &__h1{
+      display: inline-block;
+      margin: 40px 0 0;
+      &__url{
+        width: 185px;
+        height: 49px;
+        line-height: 49px;
+        display: inline-block;
+        margin: 0 8px 0 0;
+        &__img{
+          width: 185px;
+          height: 49px;
+        }
+      }
+    }
+  }
+    
   .card-box {
     width: 700px;
     margin: 0 auto;
