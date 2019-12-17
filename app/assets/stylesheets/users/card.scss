@@ -27,7 +27,7 @@
           vertical-align: top;
         }
       }
-      input {
+      .input-default {
         width: 100%;
         margin: 8px 0 0;
         padding: 10px 16px 8px;
@@ -54,6 +54,14 @@
     }
     .security-box {
       border: none;
+      .cvc {
+        width: 100%;
+        margin: 8px 0 0;
+        padding: 10px 16px 8px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
       .link-right {
         float: right;
         span {
@@ -75,7 +83,7 @@
     .go-to-next-btn {
       border: none;
       padding-bottom: 40px;
-      button {
+      .add-btn {
         background-color: #ea352d;
         width: 100%;
         color: #fff;
