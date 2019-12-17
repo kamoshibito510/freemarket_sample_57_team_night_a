@@ -72,6 +72,7 @@ gem 'gretel'
 gem 'active_hash'
 gem 'rspec-rails'
 gem 'payjp'
+gem 'dotenv-rails'
 
 group :production do
   gem 'unicorn', '5.4.1'
