@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  get 'card/new'
-  get 'card/show'
+  
+  resources :card, only: [:new, :show] do
+    collection do
+      post 'show', to: 'card#show'
+      post 'pay', to: 'card#pay'
+      post 'delete', to: 'card#delete'
+    end
+  end #Pay.jp カード登録画面のルーティング
+
+
   devise_for :users
   # devise_for :installs
   # devise_for :users
