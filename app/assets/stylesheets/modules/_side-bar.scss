@@ -5,6 +5,18 @@
   font-size: 14px;
   margin-bottom: 40px;
   clear: both;
+  .weather {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .weather-report {
+    background-color: hsl(180, 56%, 89%);
+    background-color: #d3f3f3;
+    text-align: center;
+    margin-top: 8px;
+    box-shadow: 0 0 10px darkseagreen;
+  }
   a {
     color: #333;
   }  
@@ -21,7 +33,7 @@
         display: block;
         margin: 0 0 0 auto;
         color: #ccc;    
-        }
+      }
     }
   }
 }
